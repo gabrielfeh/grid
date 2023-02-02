@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+.item{
+    margin: 5px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: grid;
+}
+
+.grid-template-columns-1{
+    grid-template-columns: 100px 100px 100px 100px;
+}
+
+.grid-template-columns-2{
+    grid-template-columns: 100px 100px 100px 100px;
+}
+
+.grid-template-columns-3{
+    grid-template-columns: 1fr 1fr;
+}
+.grid-template-columns-4{
+grid-template-columns:minmax(200px, 1fr) 1fr 1fr;
+}
+.grid-template-columns-5{
+    grid-template-columns:repeat(3, 1fr/*pode colocar qualquer medida: px, % e fr*/);
+    }
+
+.grid-template-columns-6{
+    grid-template-columns:repeat(auto-fit, 100px);/*vai colocar o máximo que der dentro do container usando auto-fit*/
+    }
+
+.grid-template-columns-7{
+    grid-template-columns:repeat(auto-fit, minmax(100px, auto));
+    max-width: 700px !important;
+    }
+
+.grid-template-columns-8{
+    grid-template-columns:repeat(auto-fill, minmax(100px, auto));/*Ele vai preencher a quantia de colunas de acordo com o tamanho do container, mesmo estando vazia*/
+    max-width: 700px !important;
+    }

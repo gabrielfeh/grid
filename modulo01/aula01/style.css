@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.item{
+    margin: 5px;
+    background: tomato;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.grid-template-columns{
+    display: grid;
+    grid-template-columns: 200px 200px;
+}
+
+.grid-template-columns-3{
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+}
+
+.grid-template-columns-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.subgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
