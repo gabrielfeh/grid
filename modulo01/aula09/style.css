@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+.item{
+    background: tomato;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 5px;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: grid;
+}
+
+.grid-auto-flow-1{
+    grid-auto-flow: column;
+    grid-template-columns: 100px 200px 100px;
+}  
+
+.grid-auto-flow-2{
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: 50px 50px;
+    grid-auto-columns: 100px;
+    grid-auto-flow: column;
+}
+
+.grid-auto-flow-3{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: dense;
+}
+
+.item-2{
+    grid-column: span 3;
+}
+.item-4{
+    grid-column: span 3;
+}
+
+.grid-1{
+    grid: 100px / 1fr 1fr 1fr;
+}
+
+.grid-2{
+    grid: 100px / auto-flow 1fr 1fr 1fr;
+    
+}
+
+.grid-3{
+    grid:
+    "logo nav nav" 50px
+    "sidenav conteudo advert" 150px
+    "sidenav footer footer" 100px
+    /100px 1fr 50px;
+}
+.logo{
+    grid-area: logo;
+}
+.nav{
+    grid-area: nav;
+}
+.sidenav{
+    grid-area: sidenav;
+}
+.conteudo{
+    grid-area: conteudo;
+}
+.advert{
+    grid-area:advert;
+}
+.footer{
+    grid-area: footer;
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+.item{
+    background: tomato;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: grid;
+}
+
+.logo{
+    grid-area: logo;
+}
+.nav{
+    grid-area: nav;
+}
+.sidenav{
+    grid-area: sidenav;
+}
+.conteudo{
+    grid-area: conteudo;
+}
+.advert{
+    grid-area:advert;
+}
+.footer{
+    grid-area: footer;
+}
+
+.grid-gap-1{
+    grid-template: 100px 50px / repeat(2, 1fr);
+    gap: 10px; /* (primeiro valor é linha segundo coluna)*/
+}
+
+.grid-gap-2{
+    grid-template:
+    "logo nav nav" 100px
+    "sidenav conteudo advert" 200px
+    "sidenav footer footer"
+    / 100px 2fr 1fr;
+    row-gap: 10px;
+    column-gap: 20px;
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+.item{
+    background: tomato;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 5px;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: grid;
+}
+
+.grid-auto-columns-1{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+}
+.item-6{
+    grid-column: 6;
+}
+
+.grid-auto-columns-2{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 50px 100px;
+}
+
+.grid-auto-columns-3{/*Fica automático o temanha da coluna*/
+    grid-template-columns: 1fr 1fr;
+}
