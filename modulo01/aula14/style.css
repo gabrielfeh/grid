@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+.item{
+    background: tomato;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 5px;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 50px;
+}
+
+.column .item-1{
+    grid-column: 3;
+}
+.column .item-2{
+    grid-column: 1 / -1 /*o Span se de defini com primeiro valor / o valor até aonde vai (e se colcar / -1 ele pega total)*/
+}
+.column .item-3{
+    grid-column: span 2/*span= quantas coluna ou linhas(rows) que vai espandir. */;
+}
+.column .item-4{
+    grid-column: 2/ span 2;/*Este abreviação do item abaixo start e end*/
+}
+.column .item-5{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/*------------------------------- rows -------------------------------*/
+
+.row .item-1{
+    grid-row: 4;
+}
+.row .item-2{
+    grid-row: span 3;
+}
+.row .item-3{
+    grid-row:2/ span 4;
+}
+
+/*------------------------------- area -------------------------------*/
+.area .item-1{
+    grid-area: 2/ 2 / 4 / 5;
+    z-index: 1;
+    background: rgba(255, 99, 71);
+}
+.area .item-2{
+    grid-area: 2/3 /6 / 6; 
+    background: red;
+    text-align: right;
+}
+.area .item-3{
+    grid-area: 5/2/5/4;
+    background: blue;
+}
+.area .item-5{
+    grid-area:3/2/5/4;
+    background: green;
+    z-index:2;
+}
+.area .item-6{
+    grid-area: 3/3/6/5;
+    z-index: 3;
+    mix-blend-mode: exclusion;
+}

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+.item{
+    background: tomato;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 5px;
+}
+
+.grid{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 50px);
+}
+.item-2, .item-3{
+    grid-row:  span 2;
+}
+.item-5{
+    grid-column: span 2;
+}
+.start{
+    justify-items: start;
+}
+
+.end{
+    justify-items: end;
+
+}
+.center{
+    justify-items: center;
+}
+.stretch{
+    justify-items: stretch;
+}
+.space-around{
+    justify-items: space-around;
+}
+.space-between{
+    justify-items: space-between;
+}
+.space-evenly{
+    justify-items: space-evenly;
+}
+
+
+
